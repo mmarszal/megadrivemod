@@ -1,7 +1,20 @@
-Saturn Switchless Mod
+Mega Drive Switchless Mod
 =====================
 
-This is the PIC-code needed for the Switchless Mod as described at http://knzl.de/saturnmod/ .
+This code is an adaption of the Saturn Switchless Mod (http://knzl.de/saturnmod/)
+All credit goes to Sebastian Kienzl, and his original license is included here.
+
+This PIC code has been modified to be somwhat simpler to modify for Mega Drives,
+specifially for using Multi-bios ROM chips for the Mega CD.
+
+The reason for this is many supplied Mega CD roms don't have a unified order,
+therefore loading an incompatible bios that matches the Mega Drives region.
+
+This code simply removes the unnecessary Saturn Jumper settings, and simply
+focuses on setting RC0 and RC2 properly in order to get the correct
+Mega CD bios loaded.
+
+RA4/5 will be considered as an order change for future purposes.
 
 For flashing a 16F630/16F676, you will only need the .hex-file, the rest is
 the source-code needed for building it yourself.
